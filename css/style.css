@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+background: #2BC0E4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ 
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+.quiz-over-modal-start {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 63%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-over-modal-start.active {
+    display: none;
+}
+
+.quiz-over-modal-start .content {
+
+background: #2BC0E4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: 700px;
+    max-width: 700px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.quiz-over-modal-start .content button {
+    padding: 15px 50px;
+    border: none;
+    background-color: #00BCD4;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+}
+.quiz-over-modal-start .content button:hover {
+    background-color: #007289;
+}
+
+/*#00BCD4
+#007289*/
+div.container4 {
+    height: 30em;
+    position: relative ;
+}
+
+
+
+div.container4 #timeout-div {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+
+
+div.container4 #timeout-div #color-red{
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    
+}
+div.container4 #timeout-div #color-yellow{
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    
+}
+div.container4 #timeout-div #color-green{
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+
+
+.quiz-container {
+    display: none; 
+}
+
+
+.quiz-container.active-test {
+    display: block; 
+    max-width: 700px;
+    min-height: 497px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 25px; 
+}
+.question-number{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.question-number h3 {
+
+    color: #00b593;
+    margin: 0;
+    padding-bottom:  10px;
+}
+
+
+.question-number h3.zdes .timeouted{
+
+    color: red;
+    margin: 0;
+    padding-bottom:  10px;
+}
+
+
+#question {
+    font-size: 24px;
+    color: #000000;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.options {
+    margin-bottom: 15px;
+}
+
+.options div {
+    background-color: #cccccc40;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.options div:hover {
+    background-color: #ccccccaf;
+}
+
+.options div.correct {
+    color: #ffffff;
+    background-color: #00b593;
+}
+
+.options div.wrong {
+    color: black;
+    background-color: #ccccccaf;
+}
+
+.options div.disabled {
+    pointer-events: none;
+}
+.button{
+    display: flex;
+}
+.button #btn-next {
+    padding: 10px 50px;
+    background-color: #c79300;
+    font-size: 18px;
+    color: #ffffff;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.button #btn-next:hover {
+    background-color: #ffaf00;
+}
+
+.errors{
+    width: 350px;
+    margin-left: 100px;
+    padding: 10px 50px;
+    font-size: 15px;
+    color: #af0707;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+#answers-tracker {
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+}
+
+#answers-tracker div{
+    height:  10px;
+    width: 40px;
+    background-color: #cccccc;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#answers-tracker div.correct {
+    background-color: #00b593;
+}
+
+#answers-tracker div.wrong {
+    background-color: #ff5767;
+}
+
+.quiz-over-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 63%);
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-over-modal.active {
+    display: flex;
+}
+
+.quiz-over-modal .content {
+
+background: #2BC0E4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: 700px;
+    max-width: 700px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.quiz-over-modal .content h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+}
+
+.quiz-over-modal .content button {
+    padding: 15px 50px;
+    border: none;
+    background-color: #00BCD4;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.quiz-over-modal .content button:hover {
+    background-color: #007289;
+}
+
+
+.container4.none{
+    display: none;
+}

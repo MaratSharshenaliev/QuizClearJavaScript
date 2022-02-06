@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тест от мары для мары</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+    <div class=container4>
+        <h1 id="timeout-div">
+            <span id="color-red"></span>
+            <span id="color-yellow"></span>
+            <span id="color-green"></span>
+        </h1>
+    </div>
+
+
+    <div class="quiz-over-modal-start">
+        <div class="content">
+            <h3>Доюро пожаловать!</h3>
+            <p>
+            Тест по математике для учащихся 9-11 классов
+            </p>
+            <button id="btn-start">Начать</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="quiz-over-modal">
+        <div class="content">
+            <h1 id = "resullt"></h1>
+            <p>Вы ответили на 
+                <span id="correct-answer"></span> из 
+                <span id="number-of-all-questions-2"></span> вопроса
+            </p>
+            <button id="btn-try-again">Поделиться c результатом</button>
+        </div>
+    </div>
+
+
+    <div class="quiz-container ">
+        <div class="question-number">
+            <h3>Вопрос 
+                <span id="number-of-question"></span>
+                из  
+                <span id="number-of-all-questions"></span> 
+            </h3>
+            <h3 class = "zdes">
+                <span class="minutes"></span>
+                <span id="dvoeto">:</span>
+                <span class="seconds"></span>
+
+            </h3>
+        </div>
+        <div id="question"></div>
+        <div class="options">
+            <div data-id="0" class="option option1"></div>
+            <div data-id="1" class="option option2"></div>
+            <div data-id="2" class="option option3"></div>
+            <div data-id="3" class="option option4"></div>
+        </div>
+        <div id="answers-tracker">
+            
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
